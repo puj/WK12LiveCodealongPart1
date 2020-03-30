@@ -1,25 +1,46 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import { GamesList } from "../components/GamesList.js";
-import { GameDetails } from "./GameDetails.js";
-import { Nav } from "../components/Nav.js";
-import { BrowserRouter,Route, Switch } from "react-router-dom";
+import React from 'react';
+import {BrowserRouter, Route, Switch} from "react-router-dom"
+import {GamesList} from '../components/GamesLists.js'
+import {GamesDetails} from "./GamesDetails.js"
+import {GenreDetails} from "./GenreDetails.js"
+
+// Video Game Browser
+
+// Step 1: Add two pages
+//  a) List of games 
+//    Component: GameThumb
+//  b) Game details (show rating, image, title, genre)
+//    
+// Step 2: Add route/switch
+// Step 3: Add Nav
+//  
+// BONUS: Add another page for genre
+
 export const Home = () => {
   return (
     <BrowserRouter>
-      <Nav />
       <main>
-          {/* Only render one of these at a time in this section */}
         <Switch>
           <Route path="/" exact>
+            <div>
+              Hello, this home.
+            </div>
+          </Route>
+
+          <Route path="/games" exact>
             <GamesList />
           </Route>
 
           <Route path="/games/:slug" exact>
-            <GameDetails />
+            <GamesDetails />
+          </Route>
+
+          <Route path="/genres/:id" exact>
+            <GenreDetails />
           </Route>
         </Switch>
       </main>
     </BrowserRouter>
-  );
+  )
 };
+
