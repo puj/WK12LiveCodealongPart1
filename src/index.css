@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Background */
+  background-image: url(https://wallpaperplay.com/walls/full/b/5/d/212455.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {
@@ -25,6 +31,7 @@ code {
 .games-list {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 
 .game-thumb {
@@ -32,7 +39,7 @@ code {
   flex-flow: column;
   background-color: #efefef;
   align-items: center;
-  margin: 4px;
+  margin: 12px;
 }
 
 .game-thumb-image-wrapper{
@@ -40,7 +47,7 @@ code {
 }
 
 .game-thumb-image {
-  padding: 8px;
+  padding: 12px;
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -55,16 +62,31 @@ code {
 }
 
 .game-thumb-image-description {
+  /* Needed for the overlay to work */
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+
+  /* Center the content vetically */
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+  /* Center horizontally */
+  text-align:center;
+
+  /* Other styling  */
   color: #000;
   font-size:32px;
+
+  /* Start as invisible */
   visibility: hidden;
-  text-align:center;
   opacity: 0;
+
+  /* Specify the animation time */
   webkit-transition: opacity 0.4s ease-in-out;
   -moz-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
