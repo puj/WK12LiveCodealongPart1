@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch} from "react-router-dom"
 import {GamesList} from '../components/GamesLists.js'
 import {GamesDetails} from "./GamesDetails.js"
 import {GenreDetails} from "./GenreDetails.js"
+import {Nav} from "../components/Nav.js"
 
 // Video Game Browser
 
@@ -19,6 +20,7 @@ import {GenreDetails} from "./GenreDetails.js"
 export const Home = () => {
   return (
     <BrowserRouter>
+      <Nav></Nav>
       <main>
         <Switch>
           <Route path="/" exact>

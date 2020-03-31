@@ -1,9 +1,10 @@
 /* eslint-disable indent */
 import React, {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useHistory} from 'react-router-dom';
 
 export const GenreDetails = () => {
     const {id} = useParams();
+    const history = useHistory();
     const GENRE_URL = `https://api.rawg.io/api/genres/${id}`;
     const [genre, setGenre] = useState();
 
@@ -15,7 +16,7 @@ export const GenreDetails = () => {
 
     // Check if things are not okay
     if (!genre) {
-        history.pushState('/games');
+        return <></>;
     }
 
     // Do things that are okay
