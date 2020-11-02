@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { GameThumb } from "./GameThumb.js";
 
-export const GamesList = () => {
+export const GameList = () => {
   const GAMES_URL = "https://api.rawg.io/api/games?ordering=-rating0";
   const [games, setGames] = useState([]);
 

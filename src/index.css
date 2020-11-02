@@ -42,8 +42,8 @@ code {
   margin: 12px;
 }
 
-.game-thumb-image-wrapper{
-  position:relative;
+.game-thumb-image-wrapper {
+  position: relative;
 }
 
 .game-thumb-image {
@@ -57,7 +57,7 @@ code {
   transition: opacity 0.4s ease-in-out;
 }
 
-.game-thumb-image-wrapper:hover .game-thumb-image{
+.game-thumb-image-wrapper:hover .game-thumb-image {
   opacity: 0.2;
 }
 
@@ -70,17 +70,17 @@ code {
   right: 0;
 
   /* Center the content vetically */
-  display:flex;
+  display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
 
   /* Center horizontally */
-  text-align:center;
+  text-align: center;
 
   /* Other styling  */
   color: #000;
-  font-size:32px;
+  font-size: 32px;
 
   /* Start as invisible */
   visibility: hidden;
